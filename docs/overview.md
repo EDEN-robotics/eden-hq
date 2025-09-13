@@ -140,6 +140,21 @@ Comprehensive documentation:
 - **Q3 2025**: Beta release with hardware integration
 - **Q4 2025**: v1.0 production release
 
+## 🚀 Quick Start Guide
+
+### For New Contributors
+1. **Fork the repository** you want to contribute to
+2. **Clone your fork** locally
+3. **Read the contributing guidelines** in `CONTRIBUTING.md`
+4. **Pick an issue** labeled "good first issue"
+5. **Make your changes** and submit a pull request
+
+### For Project Managers
+1. **Update TODO.md** with new tasks and completed items
+2. **Modify ROADMAP.md** to reflect timeline changes
+3. **Use the quick update scripts** in the `scripts/` folder
+4. **Commit changes regularly** to keep the project status current
+
 ## 🤝 Community
 
 ### How to Get Involved

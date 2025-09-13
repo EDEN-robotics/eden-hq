@@ -10,7 +10,7 @@ gantt
     dateFormat  YYYY-MM-DD
     axisFormat  %b %Y
     
-    section Phase 1: Foundation
+    section Foundation
     Project Setup & Planning     :done, setup, 2025-01-01, 2025-01-31
     Repository Structure         :done, repos, 2025-01-15, 2025-01-31
     Documentation Framework      :active, docs-fw, 2025-01-20, 2025-02-15
@@ -23,7 +23,6 @@ gantt
     AI/ML Integration          :ai-ml, 2025-03-01, 2025-05-31
     Simulation Environment     :sim-env, 2025-03-15, 2025-05-15
     Testing Framework          :test-fw, 2025-04-01, 2025-06-30
-    Performance Optimization   :perf, 2025-05-15, 2025-07-15
     
     section Hardware Development
     Requirements Analysis      :hw-req, 2025-01-15, 2025-02-15
@@ -33,15 +32,13 @@ gantt
     Component Selection        :components, 2025-03-15, 2025-04-15
     Prototype Assembly         :proto-assy, 2025-04-01, 2025-05-31
     Hardware Testing           :hw-test, 2025-05-01, 2025-06-30
-    Manufacturing Prep         :mfg-prep, 2025-06-01, 2025-07-15
     
-    section Documentation & Community
+    section Documentation
     Setup Guides              :setup-guides, 2025-01-01, 2025-02-28
     API Documentation         :api-docs, 2025-03-01, 2025-05-31
     Tutorial Series           :tutorials, 2025-04-01, 2025-06-30
     Community Wiki            :wiki, 2025-05-01, 2025-07-31
     Video Documentation       :videos, 2025-06-01, 2025-08-31
-    Website Development       :website, 2025-07-01, 2025-08-31
     
     section Integration & Testing
     Software-Hardware Integration :sw-hw-int, 2025-05-01, 2025-06-30
@@ -54,6 +51,39 @@ gantt
     Beta Testing & Feedback   :beta-test, 2025-09-01, 2025-10-15
     Final Release Preparation :final-prep, 2025-10-01, 2025-10-31
     v1.0 Release              :milestone, v1-release, 2025-11-01, 2025-11-01
+```
+
+## 🛠️ How to Update This Roadmap
+
+### Adding New Tasks
+1. **Edit ROADMAP.md** and find the Mermaid code block
+2. **Add new line** in the appropriate section:
+   ```markdown
+   Your New Task        :status, task-id, start-date, end-date
+   ```
+3. **Status options**: `done`, `active`, `crit` (critical), or custom
+4. **Test your changes**: Use [Mermaid Live Editor](https://mermaid.live)
+
+### Example: Adding a New Task
+```markdown
+# Before
+    Testing Framework          :test-fw, 2025-04-01, 2025-06-30
+
+# After (adding new task)
+    Testing Framework          :test-fw, 2025-04-01, 2025-06-30
+    Performance Optimization   :perf, 2025-05-15, 2025-07-15
+```
+
+### Updating Task Status
+```markdown
+# Mark as completed
+ROS 2 Workspace Setup       :done, ros2-ws, 2025-01-01, 2025-02-15
+
+# Mark as critical
+AI/ML Integration          :crit, ai-ml, 2025-03-01, 2025-05-31
+
+# Mark as active
+Core Navigation Package     :active, nav-pkg, 2025-02-01, 2025-03-31
 ```
 
 ## 🎯 Phase Breakdown

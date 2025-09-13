@@ -148,19 +148,30 @@
 - Manufacturing optimization
 - Conference presentations
 
-## 📊 Progress Tracking
+## 🛠️ How to Use This TODO List
 
-### Overall Progress
-- [ ] 0-25%: Foundation setup
-- [ ] 25-50%: Core development
-- [ ] 50-75%: Integration and testing
-- [ ] 75-100%: Release preparation
+### Marking Items Complete
+1. **Edit TODO.md** in your editor
+2. **Change `[ ]` to `[x]`** for completed items
+3. **Save the file**
+4. **Commit changes**: `git add TODO.md && git commit -m "Completed: [item name]"`
 
-### Weekly Goals
-- [ ] Week 1: Repository setup and basic structure
-- [ ] Week 2: First software package implementation
-- [ ] Week 3: Hardware design kickoff
-- [ ] Week 4: Integration planning
+### Adding New Items
+1. **Find the appropriate section** (Software, Hardware, General)
+2. **Add new line**: `- [ ] Your new task description`
+3. **Be specific**: Include details about what needs to be done
+4. **Commit changes**: `git add TODO.md && git commit -m "Added: [task name]"`
+
+### Quick Commands
+```bash
+# Update TODO and push
+git add TODO.md
+git commit -m "Update TODO: completed X, added Y"
+git push origin main
+
+# Use the quick update script
+scripts\quick-update.bat
+```
 
 ---
 
