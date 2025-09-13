@@ -19,7 +19,7 @@
 - [ ] Implement sensor fusion for localization
 
 ### AI/ML Integration
-- [ ] Set up machine learning framework (PyTorch/TensorFlow)
+- [x] Set up machine learning framework (PyTorch/TensorFlow)
 - [ ] Implement computer vision for object detection
 - [ ] Create decision-making neural network
 - [ ] Develop reinforcement learning environment
