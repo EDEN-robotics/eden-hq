@@ -36,9 +36,31 @@ Eden is organized across multiple specialized repositories:
 
 | Repository | Purpose | Status |
 |------------|---------|--------|
-| [eden-software](https://github.com/eden-org/eden-software) | 🤖 Core software, ROS 2 packages, AI integration | 🚧 Active Development |
-| [eden-hardware](https://github.com/eden-org/eden-hardware) | ⚡ CAD designs, PCB schematics, assembly guides | 🚧 Active Development |
-| [eden-docs](https://github.com/eden-org/eden-docs) | 📚 Documentation, tutorials, community wiki | 🚧 Active Development |
+| [eden-core](https://github.com/EDEN-robotics/eden-core) | 🤖 Shared software libraries | ✅ Complete |
+| [eden-hardware-core](https://github.com/EDEN-robotics/eden-hardware-core) | ⚡ Shared CAD/electronics | ✅ Complete |
+| [eden-adam-software](https://github.com/EDEN-robotics/eden-adam-software) | 🤖 Adam's RL + personality | ✅ Complete |
+| [eden-adam-hardware](https://github.com/EDEN-robotics/eden-adam-hardware) | ⚡ Adam's unique CAD | ✅ Complete |
+| [eden-eve-software](https://github.com/EDEN-robotics/eden-eve-software) | 🤖 Eve's RL + personality | ✅ Complete |
+| [eden-eve-hardware](https://github.com/EDEN-robotics/eden-eve-hardware) | ⚡ Eve's unique CAD | ✅ Complete |
+
+## 🖥️ Meeting Notes App
+
+**NEW!** AI-powered meeting notes application with Word-like interface:
+
+- **📝 Word-like GUI**: Familiar text editing experience
+- **🤖 AI Integration**: Uses Google Gemini AI for formatting and enhancement
+- **📄 Markdown Export**: Convert notes to GitHub-ready documentation
+- **✨ Smart Features**: Auto-formatting, summaries, action item extraction
+
+### Quick Start:
+```bash
+cd meeting-notes-app
+copy env.template .env
+# Add your Gemini API key to .env
+python app.py
+```
+
+[📖 Full Documentation → meeting-notes-app/README.md](meeting-notes-app/README.md)
 
 ## 🗓️ Roadmap Preview
 

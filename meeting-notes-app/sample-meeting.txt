@@ -1,0 +1,44 @@
+EDEN Project Meeting - September 19, 2025
+
+Attendees: Ved, AI Assistant, Development Team
+
+Agenda:
+- Repository structure setup
+- Meeting notes application development
+- Next steps for EDEN project
+
+Discussion:
+
+We successfully set up the EDEN repository structure with 6 repositories:
+- eden-core (shared software libraries)
+- eden-hardware-core (shared CAD/electronics)
+- eden-adam-software (Adam's unique RL + personality)
+- eden-adam-hardware (Adam's unique CAD)
+- eden-eve-software (Eve's unique RL + personality)
+- eden-eve-hardware (Eve's unique CAD)
+
+The repositories are now live on GitHub under the EDEN-robotics organization. All README files have been updated with correct URLs and documentation.
+
+For the meeting notes application, we created a Word-like GUI using tkinter with Gemini AI integration. The app allows users to:
+- Type notes naturally
+- Format with AI assistance
+- Export to markdown for GitHub
+- Generate summaries and action items
+- Improve grammar automatically
+
+Key decisions made:
+- Use Google Gemini AI for natural language processing
+- Create a familiar Word-like interface
+- Export to markdown for GitHub compatibility
+- Include comprehensive documentation and setup instructions
+
+Action items:
+- Set up submodules for the repositories (follow setup-submodules.md)
+- Test the meeting notes application
+- Begin development on Adam's RL algorithms
+- Start working on Eve's personality system
+- Create initial CAD designs for both robots
+
+Next meeting scheduled for next week to review progress and discuss implementation details.
+
+Meeting ended at 6:45 PM.
