@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox, filedialog
 import os
 import json
+import subprocess
 from datetime import datetime
 import google.generativeai as genai
 from dotenv import load_dotenv
@@ -26,6 +27,9 @@ class MeetingNotesApp:
         self.current_file = None
         self.is_modified = False
         
+        # Set up meeting notes directory
+        self.setup_meeting_notes_directory()
+        
     def setup_gemini(self):
         """Initialize Gemini AI with API key from environment"""
         api_key = os.getenv('GEMINI_API_KEY')
@@ -44,6 +48,45 @@ class MeetingNotesApp:
         except Exception as e:
             messagebox.showerror("AI Setup Error", f"Failed to initialize Gemini AI: {str(e)}")
             self.ai_available = False
+    
+    def setup_meeting_notes_directory(self):
+        """Set up the meeting notes directory structure"""
+        # Get the parent directory (eden-hq)
+        self.repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.meeting_notes_dir = os.path.join(self.repo_root, "meeting-notes")
+        
+        # Create meeting notes directory if it doesn't exist
+        if not os.path.exists(self.meeting_notes_dir):
+            os.makedirs(self.meeting_notes_dir)
+            
+        # Create .gitignore for meeting notes if it doesn't exist
+        gitignore_path = os.path.join(self.meeting_notes_dir, ".gitignore")
+        if not os.path.exists(gitignore_path):
+            with open(gitignore_path, 'w') as f:
+                f.write("# Meeting notes are tracked by git\n")
+                f.write("# Add patterns here if you want to ignore certain files\n")
+                f.write("# *.tmp\n")
+                f.write("# *.draft\n")
+    
+    def commit_to_git(self, file_path, commit_message):
+        """Commit a file to git repository"""
+        try:
+            # Change to repo root directory
+            os.chdir(self.repo_root)
+            
+            # Add the file to git
+            subprocess.run(['git', 'add', file_path], check=True, capture_output=True)
+            
+            # Commit the file
+            subprocess.run(['git', 'commit', '-m', commit_message], check=True, capture_output=True)
+            
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"Git commit failed: {e}")
+            return False
+        except Exception as e:
+            print(f"Unexpected error during git commit: {e}")
+            return False
     
     def create_widgets(self):
         """Create the main application interface"""
@@ -73,6 +116,7 @@ class MeetingNotesApp:
         file_menu.add_command(label="Save As", command=self.save_as_document, accelerator="Ctrl+Shift+S")
         file_menu.add_separator()
         file_menu.add_command(label="Export to Markdown", command=self.export_to_markdown)
+        file_menu.add_command(label="Open Meeting Notes Folder", command=self.open_meeting_notes_folder)
         file_menu.add_separator()
         file_menu.add_command(label="Exit", command=self.root.quit)
         
@@ -116,6 +160,7 @@ class MeetingNotesApp:
         
         ttk.Button(toolbar, text="Format with AI", command=self.format_with_ai).pack(side='left', padx=2)
         ttk.Button(toolbar, text="Export MD", command=self.export_to_markdown).pack(side='left', padx=2)
+        ttk.Button(toolbar, text="Open Notes", command=self.open_meeting_notes_folder).pack(side='left', padx=2)
         
         # AI status indicator
         self.ai_status = ttk.Label(toolbar, text="AI: Ready" if self.ai_available else "AI: Not Available")
@@ -277,21 +322,37 @@ class MeetingNotesApp:
             response = self.model.generate_content(prompt)
             markdown_content = response.text
             
-            # Save markdown file
-            file_path = filedialog.asksaveasfilename(
-                title="Export to Markdown",
-                defaultextension=".md",
-                filetypes=[("Markdown files", "*.md"), ("All files", "*.*")]
-            )
+            # Generate filename with timestamp
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            filename = f"meeting-notes_{timestamp}.md"
+            file_path = os.path.join(self.meeting_notes_dir, filename)
             
-            if file_path:
-                with open(file_path, 'w', encoding='utf-8') as file:
-                    file.write(markdown_content)
-                self.status_label.config(text=f"Exported to: {file_path}")
-                messagebox.showinfo("Success", f"Document exported to markdown: {file_path}")
+            # Save markdown file
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(markdown_content)
+            
+            # Commit to git
+            commit_message = "meeting note saved"
+            if self.commit_to_git(file_path, commit_message):
+                self.status_label.config(text=f"Exported and committed: {filename}")
+                messagebox.showinfo("Success", f"Meeting notes exported and committed to git!\n\nFile: {filename}\nLocation: {self.meeting_notes_dir}")
+            else:
+                self.status_label.config(text=f"Exported (commit failed): {filename}")
+                messagebox.showwarning("Partial Success", f"Meeting notes exported but git commit failed.\n\nFile: {filename}\nLocation: {self.meeting_notes_dir}")
                 
         except Exception as e:
             messagebox.showerror("Export Error", f"Failed to export to markdown: {str(e)}")
+            
+    def open_meeting_notes_folder(self):
+        """Open the meeting notes folder in file explorer"""
+        try:
+            if os.name == 'nt':  # Windows
+                os.startfile(self.meeting_notes_dir)
+            elif os.name == 'posix':  # macOS and Linux
+                subprocess.run(['open' if os.uname().sysname == 'Darwin' else 'xdg-open', self.meeting_notes_dir])
+            self.status_label.config(text=f"Opened meeting notes folder")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to open meeting notes folder: {str(e)}")
             
     def format_with_ai(self):
         """Format the current document using AI"""
