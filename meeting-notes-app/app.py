@@ -331,8 +331,8 @@ class MeetingNotesApp:
             with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(markdown_content)
             
-            # Commit to git
-            commit_message = "meeting note saved"
+            # Commit to git with timestamp
+            commit_message = f"meeting note saved - {timestamp.replace('_', ' ')}"
             if self.commit_to_git(file_path, commit_message):
                 self.status_label.config(text=f"Exported and committed: {filename}")
                 messagebox.showinfo("Success", f"Meeting notes exported and committed to git!\n\nFile: {filename}\nLocation: {self.meeting_notes_dir}")
