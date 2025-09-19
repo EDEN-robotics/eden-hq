@@ -38,7 +38,8 @@ class MeetingNotesApp:
             
         try:
             genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel('gemini-pro')
+            model_name = os.getenv('AI_MODEL_NAME', 'gemini-2.0-flash-exp')
+            self.model = genai.GenerativeModel(model_name)
             self.ai_available = True
         except Exception as e:
             messagebox.showerror("AI Setup Error", f"Failed to initialize Gemini AI: {str(e)}")

@@ -107,7 +107,7 @@ Edit `.env` to customize:
 ```env
 # AI Settings
 GEMINI_API_KEY=your_key_here
-AI_MODEL_NAME=gemini-pro
+AI_MODEL_NAME=gemini-2.0-flash-exp  # Options: gemini-2.0-flash-exp, gemini-pro, gemini-1.5-flash
 AI_TEMPERATURE=0.7
 
 # App Settings
@@ -120,6 +120,12 @@ DEFAULT_EXPORT_FORMAT=markdown
 INCLUDE_TIMESTAMP=true
 INCLUDE_METADATA=true
 ```
+
+### Available AI Models
+
+- **`gemini-2.0-flash-exp`** (Default) - Latest experimental model, fastest and most cost-effective
+- **`gemini-1.5-flash`** - Stable flash model, good balance of speed and quality
+- **`gemini-pro`** - Higher quality but slower and more expensive
 
 ## Example Workflow
 
