@@ -1,56 +1,37 @@
 # 🗓️ Eden Project Roadmap
 
-> Comprehensive development timeline for the Eden robotics project
+> Development timeline for the EDEN robotics project
 
 ## 📊 Master Gantt Chart
 
 ```mermaid
 gantt
-    title Eden Project Development Timeline 2025
+    title EDEN Project Development Timeline 2025
     dateFormat  YYYY-MM-DD
     axisFormat  %b %Y
     
     section Foundation
-    Project Setup & Planning     :done, setup, 2025-01-01, 2025-01-31
-    Repository Structure         :done, repos, 2025-01-15, 2025-01-31
-    Documentation Framework      :active, docs-fw, 2025-01-20, 2025-02-15
-    Community Guidelines         :guidelines, 2025-01-25, 2025-02-10
+    Repository Structure Setup    :done, repos, 2025-09-01, 2025-09-19
+    Meeting Notes App            :done, meeting-app, 2025-09-19, 2025-09-19
+    Research Outlines           :done, research, 2025-09-19, 2025-09-19
+    Team Organization           :active, team-org, 2025-09-19, 2025-10-15
     
-    section Software Development
-    ROS 2 Workspace Setup       :done, ros2-ws, 2025-01-01, 2025-02-15
-    Core Navigation Package     :active, nav-pkg, 2025-02-01, 2025-03-31
-    Control System Package      :control, 2025-02-15, 2025-04-15
-    AI/ML Integration          :ai-ml, 2025-03-01, 2025-05-31
-    Simulation Environment     :sim-env, 2025-03-15, 2025-05-15
-    Testing Framework          :test-fw, 2025-04-01, 2025-06-30
+    section Core Development
+    Adam Software Development   :adam-sw, 2025-10-01, 2025-12-31
+    Eve Software Development    :eve-sw, 2025-10-01, 2025-12-31
+    Adam Hardware Development  :adam-hw, 2025-10-15, 2025-12-31
+    Eve Hardware Development   :eve-hw, 2025-10-15, 2025-12-31
     
-    section Hardware Development
-    Requirements Analysis      :hw-req, 2025-01-15, 2025-02-15
-    Mechanical Design (CAD)    :cad-design, 2025-02-01, 2025-04-30
-    PCB Schematic Design       :pcb-sch, 2025-02-15, 2025-03-31
-    PCB Layout & Routing       :pcb-layout, 2025-03-01, 2025-04-15
-    Component Selection        :components, 2025-03-15, 2025-04-15
-    Prototype Assembly         :proto-assy, 2025-04-01, 2025-05-31
-    Hardware Testing           :hw-test, 2025-05-01, 2025-06-30
+    section Integration
+    Core Library Development   :core-lib, 2025-11-01, 2026-01-31
+    Hardware Core Development  :hw-core, 2025-11-01, 2026-01-31
+    System Integration         :integration, 2026-01-01, 2026-03-31
+    Testing & Validation       :testing, 2026-02-01, 2026-04-30
     
-    section Documentation
-    Setup Guides              :setup-guides, 2025-01-01, 2025-02-28
-    API Documentation         :api-docs, 2025-03-01, 2025-05-31
-    Tutorial Series           :tutorials, 2025-04-01, 2025-06-30
-    Community Wiki            :wiki, 2025-05-01, 2025-07-31
-    Video Documentation       :videos, 2025-06-01, 2025-08-31
-    
-    section Integration & Testing
-    Software-Hardware Integration :sw-hw-int, 2025-05-01, 2025-06-30
-    System Integration Testing    :sys-test, 2025-06-01, 2025-07-31
-    Performance Validation        :perf-val, 2025-07-01, 2025-08-15
-    User Acceptance Testing       :uat, 2025-08-01, 2025-08-31
-    
-    section Release Preparation
-    Beta Release Preparation  :beta-prep, 2025-08-15, 2025-09-15
-    Beta Testing & Feedback   :beta-test, 2025-09-01, 2025-10-15
-    Final Release Preparation :final-prep, 2025-10-01, 2025-10-31
-    v1.0 Release              :milestone, v1-release, 2025-11-01, 2025-11-01
+    section Release
+    Alpha Release              :alpha, 2026-03-01, 2026-03-31
+    Beta Release               :beta, 2026-05-01, 2026-05-31
+    v1.0 Release              :milestone, v1-release, 2026-07-01, 2026-07-01
 ```
 
 ## 🛠️ How to Update This Roadmap
@@ -64,104 +45,76 @@ gantt
 3. **Status options**: `done`, `active`, `crit` (critical), or custom
 4. **Test your changes**: Use [Mermaid Live Editor](https://mermaid.live)
 
-### Example: Adding a New Task
-```markdown
-# Before
-    Testing Framework          :test-fw, 2025-04-01, 2025-06-30
-
-# After (adding new task)
-    Testing Framework          :test-fw, 2025-04-01, 2025-06-30
-    Performance Optimization   :perf, 2025-05-15, 2025-07-15
-```
-
 ### Updating Task Status
 ```markdown
 # Mark as completed
-ROS 2 Workspace Setup       :done, ros2-ws, 2025-01-01, 2025-02-15
+Repository Structure Setup    :done, repos, 2025-09-01, 2025-09-19
 
 # Mark as critical
-AI/ML Integration          :crit, ai-ml, 2025-03-01, 2025-05-31
+Adam Software Development   :crit, adam-sw, 2025-10-01, 2025-12-31
 
 # Mark as active
-Core Navigation Package     :active, nav-pkg, 2025-02-01, 2025-03-31
+Team Organization           :active, team-org, 2025-09-19, 2025-10-15
 ```
 
 ## 🎯 Phase Breakdown
 
-### Phase 1: Foundation (January 2025)
-- **Project Setup & Planning** ✅
-  - Repository structure established
-  - Development workflow defined
-  - Community guidelines created
+### Phase 1: Foundation (September 2025)
+- **Repository Structure** ✅
+  - Core repositories established
+  - Robot-specific repositories created
+  - Meeting notes app deployed
+  - Research outlines completed
 
-### Phase 2: Core Development (February - April 2025)
-- **Software Foundation**
-  - ROS 2 workspace configuration
-  - Core navigation and control packages
-  - Basic AI/ML integration framework
+### Phase 2: Core Development (October - December 2025)
+- **Adam Development**
+  - ROS 2 workspace setup
+  - Navigation algorithms
+  - Personality system
+  - Reinforcement learning
 
-- **Hardware Foundation**
-  - Mechanical design in SolidWorks
-  - PCB schematic development
-  - Component selection and sourcing
+- **Eve Development**
+  - Computer vision pipeline
+  - Natural language processing
+  - Personality system
+  - Learning mechanisms
 
-### Phase 3: Integration & Testing (May - July 2025)
-- **System Integration**
-  - Software-hardware integration
-  - Simulation environment setup
-  - Comprehensive testing framework
+### Phase 3: Hardware Development (October - December 2025)
+- **Adam Hardware**
+  - Mechanical design
+  - PCB development
+  - Component selection
+  - Assembly guides
 
-- **Documentation**
-  - API documentation
-  - Tutorial series
-  - Community wiki
+- **Eve Hardware**
+  - Mechanical design
+  - PCB development
+  - Component selection
+  - Assembly guides
 
-### Phase 4: Release Preparation (August - November 2025)
-- **Beta Release**
-  - Beta testing program
-  - Performance optimization
-  - User feedback integration
+### Phase 4: Integration (January - April 2026)
+- **Core Libraries**
+  - Shared software components
+  - Hardware abstraction layers
+  - System integration
+  - Testing and validation
 
-- **Final Release**
-  - v1.0 release preparation
-  - Launch documentation
-  - Community celebration! 🎉
+### Phase 5: Release (March - July 2026)
+- **Alpha Release**: Core functionality
+- **Beta Release**: Feature complete
+- **v1.0 Release**: Production ready
 
-## 🔗 Dependencies
-
-### Critical Path Dependencies
-1. **Hardware → Software**: PCB design must be finalized before software integration
-2. **Documentation → Community**: Setup guides must be complete before community onboarding
-3. **Testing → Release**: All testing phases must pass before beta release
-
-### Cross-Repository Dependencies
-- `eden-software` depends on `eden-hardware` for hardware interface specifications
-- `eden-docs` depends on both software and hardware repositories for content
-- All repositories depend on `eden-hq` for coordination and project management
-
-## 📈 Success Metrics
-
-### Technical Metrics
-- [ ] 95%+ test coverage across all software packages
-- [ ] <100ms response time for critical control loops
-- [ ] 99.9% uptime in simulation environment
-- [ ] All hardware components pass stress testing
-
-### Community Metrics
-- [ ] 50+ active contributors across all repositories
-- [ ] 100+ GitHub stars across the organization
-- [ ] 20+ community-contributed features
-- [ ] 10+ external projects using Eden components
-
-## 🚀 Milestones
+## 🚀 Key Milestones
 
 | Date | Milestone | Description |
 |------|-----------|-------------|
-| 2025-02-28 | Foundation Complete | All repositories set up with basic structure |
-| 2025-04-30 | Alpha Release | Core functionality working in simulation |
-| 2025-07-31 | Beta Release | Hardware-software integration complete |
-| 2025-11-01 | v1.0 Release | Full production-ready release |
+| 2025-09-19 | Foundation Complete | Repository structure and tools setup |
+| 2025-10-15 | Team Organization | Development teams established |
+| 2025-12-31 | Core Development | Adam and Eve basic functionality |
+| 2026-03-31 | Alpha Release | Working prototypes |
+| 2026-05-31 | Beta Release | Feature complete systems |
+| 2026-07-01 | v1.0 Release | Production ready release |
 
 ---
 
-*This roadmap is a living document and will be updated as the project evolves. For the most current status, check our [GitHub Issues](https://github.com/eden-org/eden-hq/issues) and [Project Boards](https://github.com/orgs/eden-org/projects).*
+*This roadmap is updated weekly during team meetings. For detailed task tracking, see [TODO.md](TODO.md) and meeting notes in the `meeting-notes/` folder.*

@@ -1,178 +1,219 @@
-# ✅ Eden Project TODO
+# ✅ EDEN Project TODO
 
-> Comprehensive task list organized by subsystem and priority
+> Task management organized by team members and meeting assignments
 
-## 🤖 Software Tasks
+## 📋 General Project Tasks
 
-### Core Infrastructure
-- [ ] Set up ROS 2 Humble workspace
-- [ ] Configure build system (colcon)
-- [ ] Set up package structure and naming conventions
-- [ ] Implement CI/CD pipeline with GitHub Actions
-- [ ] Create Docker containers for development environment
+### Repository Management
+- [x] Set up core repositories (eden-core, eden-hardware-core)
+- [x] Set up robot-specific repositories (Adam & Eve)
+- [x] Create meeting notes application
+- [x] Create research outlines
+- [ ] Set up submodules for all repositories
+- [ ] Create initial documentation templates
+- [ ] Set up CI/CD pipelines
 
-### Navigation & Control
-- [ ] Implement SLAM (Simultaneous Localization and Mapping)
-- [ ] Create path planning algorithms
-- [ ] Develop obstacle avoidance system
-- [ ] Build motion control package
-- [ ] Implement sensor fusion for localization
-
-### AI/ML Integration
-- [x] Set up machine learning framework (PyTorch/TensorFlow)
-- [ ] Implement computer vision for object detection
-- [ ] Create decision-making neural network
-- [ ] Develop reinforcement learning environment
-- [ ] Build data collection and labeling pipeline
-
-### Simulation & Testing
-- [ ] Set up Gazebo simulation environment
-- [ ] Create robot URDF model
-- [ ] Implement unit testing framework
-- [ ] Build integration testing suite
-- [ ] Set up performance benchmarking tools
-
-### Communication & Interfaces
-- [ ] Implement ROS 2 communication protocols
-- [ ] Create web-based control interface
-- [ ] Build mobile app for monitoring
-- [ ] Develop API for external integrations
-- [ ] Set up logging and telemetry system
-
-## ⚡ Hardware Tasks
-
-### Mechanical Design
-- [ ] Create initial concept sketches
-- [ ] Design main chassis in SolidWorks
-- [ ] Model motor mounting system
-- [ ] Design sensor mounting brackets
-- [ ] Create assembly instructions
-- [ ] Perform stress analysis and optimization
-- [ ] Generate manufacturing drawings
-
-### Electronics & PCB
-- [ ] Select main microcontroller (STM32/ESP32)
-- [ ] Design power management system
-- [ ] Create motor driver circuits
-- [ ] Design sensor interface circuits
-- [ ] Layout PCB in KiCad/Altium
-- [ ] Order prototype PCBs
-- [ ] Test and validate PCB functionality
-
-### Component Selection
-- [ ] Research and select motors (DC/stepper/servo)
-- [ ] Choose appropriate sensors (IMU, cameras, lidar)
-- [ ] Select battery and power system
-- [ ] Choose communication modules (WiFi/Bluetooth)
-- [ ] Source all electronic components
-- [ ] Create bill of materials (BOM)
-
-### Assembly & Testing
-- [ ] 3D print prototype parts
-- [ ] Assemble first prototype
-- [ ] Test individual subsystems
-- [ ] Perform integration testing
-- [ ] Conduct field testing
-- [ ] Document assembly process
-- [ ] Create troubleshooting guide
-
-### Manufacturing Preparation
-- [ ] Optimize designs for production
-- [ ] Create manufacturing documentation
-- [ ] Source production suppliers
-- [ ] Set up quality control processes
-- [ ] Plan inventory management
-
-## 📚 General Tasks
-
-### Documentation
-- [ ] Create comprehensive README files
-- [ ] Write setup and installation guides
-- [ ] Document API and interfaces
-- [ ] Create user manuals
-- [ ] Build troubleshooting documentation
-- [ ] Write contribution guidelines
-- [ ] Create video tutorials
-
-### Community & Outreach
-- [ ] Set up project website
-- [ ] Create social media presence
-- [ ] Write blog posts about progress
-- [ ] Present at robotics conferences
-- [ ] Create demo videos
-- [ ] Build community forum
-- [ ] Organize hackathons/workshops
-
-### Project Management
-- [ ] Set up project tracking (GitHub Projects)
-- [ ] Create issue templates
+### Project Coordination
+- [ ] Establish weekly team meetings
+- [ ] Create project communication channels
+- [ ] Set up task assignment system
+- [ ] Create progress tracking dashboard
 - [ ] Establish code review process
-- [ ] Set up automated testing
-- [ ] Plan release schedule
-- [ ] Create milestone tracking
-- [ ] Implement feedback collection
 
-### Legal & Compliance
-- [ ] Choose open source license
-- [ ] Create contributor agreements
-- [ ] Set up trademark protection
-- [ ] Ensure safety compliance
-- [ ] Create liability disclaimers
-- [ ] Document third-party licenses
+---
 
-### Infrastructure
-- [ ] Set up cloud hosting for services
-- [ ] Configure domain and SSL
-- [ ] Set up monitoring and analytics
-- [ ] Create backup systems
-- [ ] Implement security measures
-- [ ] Set up CDN for documentation
+## 👥 Team Member Tasks
+
+### 🤖 Adam (Software Lead)
+**Assigned: Week of 2025-09-23**
+
+#### Core Development
+- [ ] Set up ROS 2 workspace for Adam
+- [ ] Implement basic navigation algorithms
+- [ ] Create Adam's personality system framework
+- [ ] Develop reinforcement learning environment
+- [ ] Set up simulation environment
+
+#### Adam-Specific Features
+- [ ] Design Adam's decision-making algorithms
+- [ ] Implement Adam's learning mechanisms
+- [ ] Create Adam's interaction protocols
+- [ ] Develop Adam's memory system
+- [ ] Build Adam's adaptation capabilities
+
+**Next Review: 2025-09-30**
+
+---
+
+### 🌟 Eve (Software Co-Lead)
+**Assigned: Week of 2025-09-23**
+
+#### Core Development
+- [ ] Set up ROS 2 workspace for Eve
+- [ ] Implement computer vision pipeline
+- [ ] Create Eve's personality system framework
+- [ ] Develop natural language processing
+- [ ] Set up testing framework
+
+#### Eve-Specific Features
+- [ ] Design Eve's communication algorithms
+- [ ] Implement Eve's learning mechanisms
+- [ ] Create Eve's interaction protocols
+- [ ] Develop Eve's memory system
+- [ ] Build Eve's adaptation capabilities
+
+**Next Review: 2025-09-30**
+
+---
+
+### ⚡ Hardware Team
+**Assigned: Week of 2025-09-30**
+
+#### Adam Hardware
+- [ ] Design Adam's mechanical structure
+- [ ] Create Adam's PCB schematics
+- [ ] Select Adam's sensors and actuators
+- [ ] Design Adam's power management
+- [ ] Create Adam's assembly guide
+
+#### Eve Hardware
+- [ ] Design Eve's mechanical structure
+- [ ] Create Eve's PCB schematics
+- [ ] Select Eve's sensors and actuators
+- [ ] Design Eve's power management
+- [ ] Create Eve's assembly guide
+
+**Next Review: 2025-10-07**
+
+---
+
+### 🔬 Research Team
+**Assigned: Week of 2025-09-23**
+
+#### Literature Review
+- [ ] Complete ROS 2 navigation research
+- [ ] Review AI/ML integration papers
+- [ ] Study hardware design best practices
+- [ ] Research safety and ethics guidelines
+- [ ] Compile technology comparison matrix
+
+#### Documentation
+- [ ] Update research outlines with findings
+- [ ] Create technical specification documents
+- [ ] Document design decisions and rationale
+- [ ] Create implementation guides
+- [ ] Write testing and validation procedures
+
+**Next Review: 2025-09-30**
+
+---
+
+## 📅 Meeting Notes & Assignments
+
+### Week of 2025-09-23
+**Meeting Date: 2025-09-23**
+
+#### Assignments Made
+- **Adam**: Begin ROS 2 workspace setup and navigation algorithms
+- **Eve**: Start computer vision pipeline and NLP development
+- **Research Team**: Complete literature review for core technologies
+
+#### Action Items
+- [ ] All team members to review research outlines
+- [ ] Set up development environments
+- [ ] Create initial project timelines
+- [ ] Establish communication protocols
+
+#### Next Meeting: 2025-09-30
+
+---
+
+### Week of 2025-09-30
+**Meeting Date: TBD**
+
+#### Planned Assignments
+- **Hardware Team**: Begin mechanical design and PCB development
+- **Adam**: Complete basic navigation system
+- **Eve**: Finish computer vision pipeline
+- **Research Team**: Document findings and create specifications
+
+#### Review Items
+- [ ] Adam's ROS 2 workspace progress
+- [ ] Eve's computer vision implementation
+- [ ] Research team's literature review
+- [ ] Hardware team's design concepts
+
+---
 
 ## 🎯 Priority Levels
 
-### 🔴 High Priority (Must Complete for v1.0)
-- Core ROS 2 functionality
-- Basic navigation system
-- Hardware prototype
-- Essential documentation
+### 🔴 High Priority (This Sprint)
+- Repository submodule setup
+- Team member environment setup
+- Core algorithm development
+- Research documentation
 
-### 🟡 Medium Priority (Nice to Have for v1.0)
+### 🟡 Medium Priority (Next Sprint)
+- Hardware design initiation
+- Advanced feature development
+- Testing framework setup
+- Documentation completion
+
+### 🟢 Low Priority (Future Sprints)
+- Performance optimization
 - Advanced AI features
-- Web interface
-- Comprehensive testing
-- Community features
+- Manufacturing preparation
+- Community outreach
 
-### 🟢 Low Priority (Future Releases)
-- Mobile app
-- Advanced simulation
-- Manufacturing optimization
-- Conference presentations
+---
 
-## 🛠️ How to Use This TODO List
+## 📊 Progress Tracking
 
-### Marking Items Complete
-1. **Edit TODO.md** in your editor
-2. **Change `[ ]` to `[x]`** for completed items
-3. **Save the file**
-4. **Commit changes**: `git add TODO.md && git commit -m "Completed: [item name]"`
+### Team Velocity
+- **Adam**: 0/5 tasks completed (0%)
+- **Eve**: 0/5 tasks completed (0%)
+- **Hardware Team**: 0/5 tasks completed (0%)
+- **Research Team**: 0/5 tasks completed (0%)
 
-### Adding New Items
-1. **Find the appropriate section** (Software, Hardware, General)
-2. **Add new line**: `- [ ] Your new task description`
-3. **Be specific**: Include details about what needs to be done
-4. **Commit changes**: `git add TODO.md && git commit -m "Added: [task name]"`
+### Sprint Progress
+- **Current Sprint**: Week of 2025-09-23
+- **Sprint Goal**: Set up development environments and begin core development
+- **Completion**: 0% (0/20 tasks)
+
+---
+
+## 🛠️ How to Use This TODO
+
+### For Team Members
+1. **Check your assigned tasks** in your section
+2. **Mark completed items** by changing `[ ]` to `[x]`
+3. **Add notes** about progress or blockers
+4. **Update during weekly meetings**
+
+### For Project Managers
+1. **Review progress** in each team member section
+2. **Track meeting assignments** and deadlines
+3. **Update priorities** based on project needs
+4. **Plan next sprint** assignments
 
 ### Quick Commands
 ```bash
 # Update TODO and push
 git add TODO.md
-git commit -m "Update TODO: completed X, added Y"
+git commit -m "Update TODO: [team member] completed X"
 git push origin main
-
-# Use the quick update script
-scripts\quick-update.bat
 ```
 
 ---
 
-*This TODO list is updated regularly. Check off completed items and add new ones as the project evolves. For detailed task tracking, see our [GitHub Issues](https://github.com/eden-org/eden-hq/issues) and [Project Boards](https://github.com/orgs/eden-org/projects).*
+## 📝 Meeting Notes Integration
+
+Meeting notes from the EDEN Meeting Notes App are automatically saved to:
+- **Location**: `meeting-notes/` folder
+- **Format**: Markdown with AI formatting
+- **Commit**: Automatic with timestamp
+- **Access**: Use "Open Notes" button in the app
+
+---
+
+*This TODO list is updated weekly during team meetings. Each team member is responsible for updating their progress and reporting blockers.*

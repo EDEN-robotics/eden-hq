@@ -39,3 +39,4 @@ Write-Host "Starting the application..." -ForegroundColor Green
 python app.py
 
 Read-Host "Press Enter to exit"
+
